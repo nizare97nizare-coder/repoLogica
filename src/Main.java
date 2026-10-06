@@ -1,13 +1,34 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.util.Scanner;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner dato = new Scanner(System.in);
+
+        System.out.println("CALCULADORA");
+
+        System.out.println("ingrese la operacion que desea realizar");
+        System.out.println("1)suma 2)resta 3)multiplicacion 4)divison");
+        int operacion = dato.nextInt();
+
+
+        System.out.println("ingrese el primer numero");
+        double a = dato.nextDouble();
+
+        System.out.println("ingrese el segundo numero");
+        double b = dato.nextDouble();
+
+
+        if(operacion==1){
+            System.out.println(Calculadora.sumar(a,b));
+        }else if(operacion==2){
+            System.out.println(Calculadora.restar(a,b));
+        }else if (operacion==3){
+            System.out.println(Calculadora.multiplicar(a,b));
+        } else if (operacion==4) {
+            System.out.println(Calculadora.division(a,b));
+        }
+
+
     }
 }

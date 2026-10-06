@@ -13,6 +13,15 @@ public class Calculadora {
     }
 
     public static double division(double a, double b) {
-        return a / b;
+
+        if (b == 0) {
+           System.out.println("error matematico");
+           return 0;
+        } else {
+            return a / b;
+        }
     }
 }
+
+
+
